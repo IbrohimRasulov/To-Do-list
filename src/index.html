@@ -6,18 +6,32 @@
     <title>To Do list</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <main class="card">
         <h5 id="to-do-heading">Today's To Do</h5>
-        <form>
+        <form id="task-form" class="">
             <input type="text" name="task-name" id="task-name" placeholder="Add to your list...">
+            <i class="fas fa-arrow-circle-right fa-lg"></i>
         </form>
-
+ 
         <ul id="task-list" class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item" draggable="true">
+                <input type="checkbox" class="check-box">
+                <p class="d-inline">An item</p>
+                <i class="fas fa-ellipsis-v drag-drop float-end"></i>
+            </li>
+            <li class="list-group-item" draggable="true">
+                <input type="checkbox" class="check-box">
+                <p class="d-inline">Second item</p>
+                <i class="fas fa-ellipsis-v drag-drop float-end"></i>
+            </li>
+            <li class="list-group-item" draggable="true">
+                <input type="checkbox" class="check-box">
+                <p class="d-inline">Third item</p>
+                <i class="fas fa-ellipsis-v drag-drop float-end"></i>
+            </li>
         </ul>
 
         <button id="clr-btn">Clear all completed</button>

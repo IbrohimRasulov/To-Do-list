@@ -5,7 +5,7 @@ main {
 
 #task-name {
   border: none;
-  width: 100%;
+  width: 90%;
   padding: 8px 16px;
   margin-top: 0;
 }
@@ -35,4 +35,26 @@ main {
 
 #clr-btn:hover {
   color: #6948fb;
+}
+
+#task-form i {
+  color: #888;
+  cursor: pointer;
+}
+
+#task-form i:hover {
+  color: #3ac47d;
+}
+
+.check-box {
+  margin-right: 5px;
+}
+
+.drag-drop {
+  cursor: all-scroll;
+  color: #888;
+}
+
+.drag-drop:hover {
+  color: black;
 }
