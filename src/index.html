@@ -11,25 +11,25 @@
 <body>
     <main class="card">
         <h5 id="to-do-heading">Today's To Do</h5>
-        <form id="task-form" class="">
-            <input type="text" name="task-name" id="task-name" placeholder="Add to your list...">
-            <i class="fas fa-arrow-circle-right fa-lg"></i>
+        <form id="task-form">
+            <input type="text" name="task-name" id="task-name" placeholder="Add to your list..." required>
+            <i id="enter-task" class="fas fa-arrow-circle-right fa-lg"></i>
         </form>
  
-        <ul id="task-list" class="list-group list-group-flush">
+        <ul id="todo-list" class="list-group list-group-flush">
             <li class="list-group-item" draggable="true">
-                <input type="checkbox" class="check-box">
-                <p class="d-inline">An item</p>
+                <input type="checkbox" class="checkbox">
+                <label class="d-inline">First task</label>
                 <i class="fas fa-ellipsis-v drag-drop float-end"></i>
             </li>
             <li class="list-group-item" draggable="true">
-                <input type="checkbox" class="check-box">
-                <p class="d-inline">Second item</p>
+                <input type="checkbox" class="checkbox">
+                <label class="d-inline">Second task</label>
                 <i class="fas fa-ellipsis-v drag-drop float-end"></i>
             </li>
             <li class="list-group-item" draggable="true">
-                <input type="checkbox" class="check-box">
-                <p class="d-inline">Third item</p>
+                <input type="checkbox" class="checkbox">
+                <label class="d-inline">Third task</label>
                 <i class="fas fa-ellipsis-v drag-drop float-end"></i>
             </li>
         </ul>
@@ -37,6 +37,6 @@
         <button id="clr-btn">Clear all completed</button>
     </main>
 
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
