@@ -10,28 +10,28 @@
 </head>
 <body>
     <main class="card">
-        <h5 id="to-do-heading">Today's To Do</h5>
-        <form id="task-form">
-            <input type="text" name="task-name" id="task-name" placeholder="Add to your list..." required>
-            <i id="enter-task" class="fas fa-arrow-circle-right fa-lg"></i>
+        <h5 id="todo-heading">Today's To Do</h5>
+        <form>
+            <input type="text" name="title" id="title" placeholder="Add to your list..." required>
+            <button type="submit" id="submit-btn"><i class="fas fa-arrow-circle-right fa-lg"></i></button>
         </form>
  
-        <ul id="todo-list" class="list-group list-group-flush">
-            <li class="list-group-item" draggable="true">
+        <ul class="list-group list-group-flush">
+            <!-- <li class="list-group-item" draggable="true">
                 <input type="checkbox" class="checkbox">
-                <label class="d-inline">First task</label>
-                <i class="fas fa-ellipsis-v drag-drop float-end"></i>
+                <label>First task</label>
+                <i class="fa fa-ellipsis-v drag-drop float-end"></i>
             </li>
             <li class="list-group-item" draggable="true">
                 <input type="checkbox" class="checkbox">
-                <label class="d-inline">Second task</label>
-                <i class="fas fa-ellipsis-v drag-drop float-end"></i>
+                <label>Second task</label>
+                <i class="fa fa-ellipsis-v drag-drop float-end"></i>
             </li>
             <li class="list-group-item" draggable="true">
                 <input type="checkbox" class="checkbox">
-                <label class="d-inline">Third task</label>
-                <i class="fas fa-ellipsis-v drag-drop float-end"></i>
-            </li>
+                <label>Third task</label>
+                <i class="fa fa-ellipsis-v drag-drop float-end"></i>
+            </li> -->
         </ul>
 
         <button id="clr-btn">Clear all completed</button>

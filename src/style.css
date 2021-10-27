@@ -3,24 +3,7 @@ main {
   margin: 50px auto 0 auto;
 }
 
-#task-name {
-  border: none;
-  width: 90%;
-  padding: 8px 16px;
-  margin-top: 0;
-}
-
-#task-name::placeholder {
-  font-style: italic;
-  color: #bbb;
-}
-
-#task-name:focus {
-  outline: none;
-  background: white;
-}
-
-#to-do-heading {
+#todo-heading {
   font-weight: 300;
   border-bottom: 1px solid #ddd;
   padding: 8px 16px;
@@ -38,16 +21,38 @@ main {
   color: #6948fb;
 }
 
-#task-form i {
-  color: #888;
-  cursor: pointer;
+#title {
+  border: none;
+  width: 89%;
+  padding: 8px 16px;
+  margin-top: 0;
 }
 
-#task-form i:hover {
+#title::placeholder {
+  font-style: italic;
+  color: #bbb;
+}
+
+#title:focus {
+  outline: none;
+  background: white;
+}
+
+#submit-btn {
+  float: right;
+  border: none;
+  background: none;
+  padding: 8px;
+  color: #888;
+  cursor: pointer;
+  outline: none;
+}
+
+#submit-btn:hover {
   color: #3ac47d;
 }
 
-.check-box {
+.checkbox {
   margin-right: 10px;
 }
 
