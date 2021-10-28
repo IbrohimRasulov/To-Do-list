@@ -47,7 +47,6 @@ function printTasks(task) {
   label.innerHTML = task.description;
   icon.classList = 'fa fa-ellipsis-v drag-drop float-end';
 
-
   li.appendChild(checkBox);
   li.appendChild(label);
   li.appendChild(icon);
