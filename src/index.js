@@ -1,37 +1,7 @@
 import './style.css';
+import { addTask } from './status.js';
 
-const tasks = [
-  {
-    description: 'Set up a project with webpack',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Created an index.html file',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Set an array of sample to-do tasks',
-    completed: true,
-    index: 3,
-  },
-  {
-    description: 'Create a funtion to populate the HTML',
-    completed: true,
-    index: 4,
-  },
-  {
-    description: 'Dynamically create list of tasks',
-    completed: true,
-    index: 5,
-  },
-  {
-    description: 'Created a style.css',
-    completed: true,
-    index: 6,
-  },
-];
+let tasks = [];
 
 function printTasks(task) {
   const li = document.createElement('li');
@@ -53,4 +23,21 @@ function printTasks(task) {
   document.querySelector('.list-group').appendChild(li);
 }
 
-tasks.forEach((task) => printTasks(task));
+function showBook() {
+  document.querySelector('.list-group').innerHTML = '';
+
+  if (localStorage.getItem('list')) {
+    tasks = JSON.parse(localStorage.getItem('list'));
+  }
+  tasks.forEach((task) => printTasks(task));
+}
+
+showBook();
+
+document.querySelector('#input-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  addTask(tasks);
+
+  showBook();
+})
