@@ -1,7 +1,8 @@
-import config, { output } from './webpack.config.js';
 import express from 'express';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
+import config, { output } from './webpack.config.js';
+
 
 const app = express();
 const compiler = webpack(config);
