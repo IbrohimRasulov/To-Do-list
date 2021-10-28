@@ -9,6 +9,7 @@ jobs:
   eslint:
     name: ESLint
     runs-on: ubuntu-18.04
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
