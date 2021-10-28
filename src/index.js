@@ -1,6 +1,8 @@
 import './style.css';
 import { addTask } from './status.js';
 
+const taskList = document.querySelector('.list-group')
+
 let tasks = [];
 
 function printTasks(task) {
@@ -20,11 +22,11 @@ function printTasks(task) {
   li.appendChild(checkBox);
   li.appendChild(label);
   li.appendChild(icon);
-  document.querySelector('.list-group').appendChild(li);
+  taskList.appendChild(li);
 }
 
 function showBook() {
-  document.querySelector('.list-group').innerHTML = '';
+  taskList.innerHTML = '';
 
   if (localStorage.getItem('list')) {
     tasks = JSON.parse(localStorage.getItem('list'));
@@ -41,3 +43,9 @@ document.querySelector('#input-form').addEventListener('submit', (e) => {
 
   showBook();
 })
+
+taskList.addEventListener('click', (e) => {
+  if (e.target.classList = 'checkbox') {
+    e.target.parentNode.childNodes[1].classList.toggle('completed');
+  }
+});

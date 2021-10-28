@@ -64,3 +64,7 @@ main {
 .drag-drop:hover {
   color: black;
 }
+
+.completed {
+  text-decoration: line-through;
+}
