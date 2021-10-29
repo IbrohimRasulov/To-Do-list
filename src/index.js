@@ -1,51 +1,70 @@
+import * as task from './status';
+import addEvents from './drag&drop';
 import './style.css';
-import addTask from './status';
 
-const taskList = document.querySelector('.list-group');
+let list = [
+];
 
-let tasks = [];
-
-function printTasks(task) {
-  const li = document.createElement('li');
-  const checkBox = document.createElement('input');
-  const icon = document.createElement('i');
-  const label = document.createElement('label');
-
-  li.classList = 'list-group-item';
-  li.setAttribute('draggable', 'true');
-  checkBox.type = 'checkbox';
-  checkBox.classList = 'checkbox';
-  checkBox.checked = task.completed;
-  label.innerHTML = task.description;
-  icon.classList = 'fa fa-ellipsis-v drag-drop float-end';
-
-  li.appendChild(checkBox);
-  li.appendChild(label);
-  li.appendChild(icon);
-  taskList.appendChild(li);
-}
-
-function showBook() {
-  taskList.innerHTML = '';
-
-  if (localStorage.getItem('list')) {
-    tasks = JSON.parse(localStorage.getItem('list'));
+function listIt() {
+  if (window.localStorage.getItem('todos')) {
+    const todos = window.localStorage.getItem('todos');
+    list = JSON.parse(todos);
   }
-  tasks.forEach((task) => printTasks(task));
+  document.querySelector('.list').innerHTML = '';
+  list.forEach((item) => {
+    const taskElement = document.createElement('li');
+    taskElement.classList.add('task', 'draggable');
+    if (item.isCompleted) {
+      taskElement.classList.add('completed');
+    }
+    const delBtn = document.createElement('button');
+    const delIcon = document.createElement('i');
+    delIcon.classList = 'far fa-trash-alt icon del';
+    delBtn.appendChild(delIcon);
+    delBtn.classList.add('del-container');
+    delBtn.addEventListener('click', () => {
+      task.removeThis(item, list);
+      listIt();
+    });
+    const checker = document.createElement('input');
+    checker.type = 'checkbox';
+    checker.classList.add('task-check');
+    checker.addEventListener('click', () => {
+      task.toggle(item, list);
+      listIt();
+    });
+    checker.checked = item.isCompleted;
+    const taskText = document.createElement('input');
+    taskText.classList = 'task-text';
+    taskText.value = item.description;
+    taskText.addEventListener('change', () => {
+      if (taskText.value.length > 0) {
+        item.description = taskText.value;
+        task.saveLocal(list);
+      }
+    });
+    const dragIcon = document.createElement('i');
+    dragIcon.classList = 'fas fa-ellipsis-v drag icon';
+    taskElement.appendChild(delBtn);
+    taskElement.appendChild(checker);
+    taskElement.appendChild(taskText);
+    taskElement.appendChild(dragIcon);
+    taskElement.draggable = 'true';
+    document.querySelector('.list').appendChild(taskElement);
+  });
+  document.querySelector('.input-task').focus();
+  addEvents(list);
 }
 
-showBook();
-
-document.querySelector('#input-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  addTask(tasks);
-
-  showBook();
+listIt();
+document.querySelector('#taskForm').addEventListener('submit', (event) => {
+  event.preventDefault();
+  task.add(list);
+  listIt();
+});
+document.querySelector('.clearer').addEventListener('click', () => {
+  task.removeDone(list);
+  listIt();
 });
 
-// taskList.addEventListener('click', (e) => {
-//   if (e.target.classList = 'checkbox') {
-//     e.target.parentNode.childNodes[1].classList.toggle('completed');
-//   }
-// });
+export default listIt;
