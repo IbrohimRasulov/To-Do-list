@@ -1,5 +1,5 @@
 import * as task from './status';
-import addEvents from './drag&drop';
+import addEvents from './drag&drop'; // eslint-disable-line
 import './style.css';
 
 let list = [
