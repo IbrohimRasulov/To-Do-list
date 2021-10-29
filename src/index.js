@@ -1,7 +1,7 @@
 import './style.css';
-import { addTask } from './status.js';
+import { addTask } from './status';
 
-const taskList = document.querySelector('.list-group')
+const taskList = document.querySelector('.list-group');
 
 let tasks = [];
 
@@ -42,10 +42,10 @@ document.querySelector('#input-form').addEventListener('submit', (e) => {
   addTask(tasks);
 
   showBook();
-})
-
-taskList.addEventListener('click', (e) => {
-  if (e.target.classList = 'checkbox') {
-    e.target.parentNode.childNodes[1].classList.toggle('completed');
-  }
 });
+
+// taskList.addEventListener('click', (e) => {
+//   if (e.target.classList = 'checkbox') {
+//     e.target.parentNode.childNodes[1].classList.toggle('completed');
+//   }
+// });
