@@ -1,7 +1,7 @@
 {
   "name": "webpack-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "> Build a To Do List JavaScript application ![app-screenshot](./app-screenshot.png)",
   "private": true,
   "dependencies": {
     "lodash": "^4.17.21"
@@ -19,7 +19,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "server": "node server.js",
     "build": "webpack"
   },
   "repository": {
@@ -32,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/IbrohimRasulov/Webpack-template/issues"
   },
-  "homepage": "https://github.com/IbrohimRasulov/Webpack-template#readme"
+  "homepage": "https://github.com/IbrohimRasulov/Webpack-template#readme",
+  "main": "webpack.config.js"
 }
