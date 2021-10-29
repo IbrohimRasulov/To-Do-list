@@ -1,5 +1,5 @@
 import './style.css';
-import { addTask } from './status';
+import addTask from './status';
 
 const taskList = document.querySelector('.list-group');
 
