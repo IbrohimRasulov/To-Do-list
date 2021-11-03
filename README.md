@@ -10,6 +10,10 @@ Create a simple HTML list of To Do tasks using webpack to bundle JavaScript.
 - JavaScript, HTML, CSS
 - Webpack
 
+## Live Demo
+
+[Live Demo Link](https://ibrohimrasulov.github.io/To-Do-list/)
+
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
