@@ -12,7 +12,7 @@ Create a simple HTML list of To Do tasks using webpack to bundle JavaScript.
 
 ## Live Demo
 
-[Live Demo Link](https://ibrohimrasulov.github.io/To-Do-list/)
+[Live Demo Link](https://ibrohimrasulov.github.io/To-Do-list/dist/)
 
 ## Getting Started
 
