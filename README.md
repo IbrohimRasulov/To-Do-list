@@ -3,6 +3,8 @@
 > Build a To Do List JavaScript application
 ![app-screenshot](./app-screenshot.png)
 
+## About The Project
+
 I Created a simple HTML list of To Do tasks using webpack to bundle JavaScript. It can add tasks, mark them as completed and delete all completed tasks. Besides, all tasks are stored in local storage. Check live demo to try.
 
 ## Built With
