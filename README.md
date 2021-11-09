@@ -5,7 +5,7 @@
 
 ## About The Project
 
-I Created a simple HTML list of To Do tasks using webpack to bundle JavaScript. It can add tasks, mark them as completed and delete all completed tasks. Besides, all tasks are stored in local storage. Check live demo to try.
+> The project I have built is based on a simple app which adds tasks, marks them as completed and deletes all completed tasks. This project has been built with the help of modern CSS3, Bootstrap 5, JavaScript and webpack to bundle JavaScript. Check the live demo to try.
 
 ## Built With
 
